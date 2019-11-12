@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1079523463333",
+    "firebase_url": "https://touchnc-4dace.firebaseio.com",
+    "project_id": "touchnc-4dace",
+    "storage_bucket": "touchnc-4dace.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1079523463333:android:0420cae525bccd0214fd4c",
+        "android_client_info": {
+          "package_name": "com.touchnc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1079523463333-2e2v2tpi83v75rrq2451uvs157l5e141.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6WS5Jl-V3q6MeFjTmJCfdSlW3L-tG3PI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1079523463333-2e2v2tpi83v75rrq2451uvs157l5e141.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

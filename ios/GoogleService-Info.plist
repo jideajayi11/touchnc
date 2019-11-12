@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1079523463333-hkr1atn90b3cha0tjdu4eahgdp2k15od.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1079523463333-hkr1atn90b3cha0tjdu4eahgdp2k15od</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDvyXDvL9-PZxZ3crudTnXUy7FeLib1BPU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1079523463333</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.reactjs.native.example.touchnc</string>
+	<key>PROJECT_ID</key>
+	<string>touchnc-4dace</string>
+	<key>STORAGE_BUCKET</key>
+	<string>touchnc-4dace.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1079523463333:ios:af641925bcd3e9ff14fd4c</string>
+	<key>DATABASE_URL</key>
+	<string>https://touchnc-4dace.firebaseio.com</string>
+</dict>
+</plist>
