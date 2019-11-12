@@ -178,19 +178,11 @@ android {
         }
     }
 
-    flavorDimensions "react-native-camera"
-
-    productFlavors {
-        general {
-            dimension "react-native-camera"
-        }
-        mlkit {
-            dimension "react-native-camera"
-        }
-    }
+   
 }
 
 dependencies {
+    implementation project(':@react-native-community_async-storage')
     implementation project(':react-native-permissions')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules

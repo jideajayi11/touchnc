@@ -15,7 +15,7 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
-
+import {PERMISSIONS} from 'react-native-permissions';
 import {
   Header,
   LearnMoreLinks,
@@ -23,6 +23,10 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+
+import QRCodeScanner from 'react-native-qrcode-scanner';
+
+PERMISSIONS.ANDROID.CAMERA;
 
 const App: () => React$Node = () => {
   return (
@@ -45,6 +49,7 @@ const App: () => React$Node = () => {
                 Edit <Text style={styles.highlight}>App.js</Text> to change this
                 screen and then come back to see your edits.
               </Text>
+              <QRCodeScanner onRead={readQrCode} />
             </View>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>See Your Changes</Text>
@@ -70,6 +75,10 @@ const App: () => React$Node = () => {
       </SafeAreaView>
     </>
   );
+};
+
+const readQrCode = code => {
+  console.log(code.data);
 };
 
 const styles = StyleSheet.create({

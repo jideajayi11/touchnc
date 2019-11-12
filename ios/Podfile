@@ -40,6 +40,10 @@ target 'touchnc' do
 
   pod 'RNPermissions', :path => '../node_modules/react-native-permissions'
 
+  pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
+  permissions_path = '../node_modules/react-native-permissions/ios'
+  pod 'Permission-Camera', :path => "#{permissions_path}/Camera.podspec"
+
   target 'touchncTests' do
     inherit! :search_paths
     # Pods for testing

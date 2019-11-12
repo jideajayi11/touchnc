@@ -130,6 +130,8 @@ PODS:
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
+  - Permission-Camera (2.0.0):
+    - RNPermissions
   - Protobuf (3.10.0)
   - RCTRequired (0.61.4)
   - RCTTypeSafety (0.61.4):
@@ -339,6 +341,10 @@ PODS:
     - React-cxxreact (= 0.61.4)
     - React-jsi (= 0.61.4)
     - ReactCommon/jscallinvoker (= 0.61.4)
+  - RNCAsyncStorage (1.6.2):
+    - React
+  - RNPermissions (2.0.0):
+    - React
   - Yoga (1.14.0)
 
 DEPENDENCIES:
@@ -348,6 +354,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
+  - Permission-Camera (from `../node_modules/react-native-permissions/ios/Camera.podspec`)
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
   - React (from `../node_modules/react-native/`)
@@ -371,6 +378,8 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - ReactCommon/jscallinvoker (from `../node_modules/react-native/ReactCommon`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
+  - RNPermissions (from `../node_modules/react-native-permissions`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -406,6 +415,8 @@ EXTERNAL SOURCES:
     :podspec: "../node_modules/react-native/third-party-podspecs/Folly.podspec"
   glog:
     :podspec: "../node_modules/react-native/third-party-podspecs/glog.podspec"
+  Permission-Camera:
+    :path: "../node_modules/react-native-permissions/ios/Camera.podspec"
   RCTRequired:
     :path: "../node_modules/react-native/Libraries/RCTRequired"
   RCTTypeSafety:
@@ -446,6 +457,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/Libraries/Vibration"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RNCAsyncStorage:
+    :path: "../node_modules/@react-native-community/async-storage"
+  RNPermissions:
+    :path: "../node_modules/react-native-permissions"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -473,6 +488,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: f895fde57977df4e0233edda0dbeac490e3703b6
   GTMSessionFetcher: 43b8b64263023d4f32caa0b40f4c8bfa3c5f36d8
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
+  Permission-Camera: 4c4d5fc58e1a37e8a807e63403b64cda05a3fcdd
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
   RCTRequired: f3b3fb6f4723e8e52facb229d0c75fdc76773849
   RCTTypeSafety: 2ec60de6abb1db050b56ecc4b60188026078fd10
@@ -494,8 +510,10 @@ SPEC CHECKSUMS:
   React-RCTText: 21934e0a51d522abcd0a275407e80af45d6fd9ec
   React-RCTVibration: 0f76400ee3cec6edb9c125da49fed279340d145a
   ReactCommon: a6a294e7028ed67b926d29551aa9394fd989c24c
+  RNCAsyncStorage: 5ae4d57458804e99f73d427214442a6b10a53856
+  RNPermissions: 43fe093bcfe89d3a05a4b82a695db9db9e7dcf21
   Yoga: ba3d99dbee6c15ea6bbe3783d1f0cb1ffb79af0f
 
-PODFILE CHECKSUM: 7156a827e959047fe3bd18f150f602ca070c3c90
+PODFILE CHECKSUM: cffb304bf49b3ad281bed310cc023ca2210656c4
 
 COCOAPODS: 1.8.4
