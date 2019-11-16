@@ -22,7 +22,7 @@ const QRCodeScannerComponent = props => {
 
   useEffect(() => {
     if (reportText) {
-      setTimeout(() => setReportText(''), 2000);
+      setTimeout(() => setReportText(''), 4000);
     }
   });
 
@@ -41,7 +41,7 @@ const QRCodeScannerComponent = props => {
     if (responseJson.status === 'success') {
       await AsyncStorage.setItem('delegate', '[]');
       setIsReportSuccess(true);
-      setReportText('Cloud sync successful');
+      setReportText('Cloud Sync Successful');
     }
     setTimeout(() => setShowQr(true), 1000);
 
@@ -62,14 +62,14 @@ const QRCodeScannerComponent = props => {
         });
         await AsyncStorage.setItem('delegate', JSON.stringify(updatedValue));
         setIsReportSuccess(true);
-        setReportText('Scanned Successfully');
+        setReportText('Scan Successful!');
       } else {
         setIsReportSuccess(false);
-        setReportText('Scanned before');
+        setReportText('Already Scanned!');
       }
     } catch (err) {
       setIsReportSuccess(false);
-      setReportText('Scan failed');
+      setReportText('Scan Failed!');
     }
     // scanner.reactivate();
   };
@@ -77,9 +77,7 @@ const QRCodeScannerComponent = props => {
   const QRCodeScannerView = () => (
     <QRCodeScanner
       onRead={readQrCode}
-      topContent={
-        <Text>Set the QR Code in the box that is on the camera view.</Text>
-      }
+      topContent={<Text>Focus Camera on QR Code</Text>}
       bottomContent={
         <Text style={isReportSuccess ? styles.textSuccess : styles.textFail}>
           {reportText}
@@ -88,7 +86,7 @@ const QRCodeScannerComponent = props => {
       containerStyle={styles.scannerContainer}
       cameraStyle={styles.scannerCamera}
       reactivate={true}
-      reactivateTimeout={4000}
+      reactivateTimeout={6000}
       showMarker
       markerStyle={styles.marker}
       bottomViewStyle={isReportSuccess ? styles.textSuccess : styles.textFail}
@@ -101,7 +99,7 @@ const QRCodeScannerComponent = props => {
         source={require('../assets/images/sync_on.png')}
         style={styles.logo}
       />
-      <Text style={styles.sectionTitle}>Cloud Syncing in progress...</Text>
+      <Text style={styles.sectionTitle}>Cloud Sync in Progress...</Text>
     </View>
   );
 
@@ -117,8 +115,8 @@ const QRCodeScannerComponent = props => {
         {showQr && (
           <Button
             onPress={syncToCloud}
-            title="Sync to cloud now."
-            accessibilityLabel="Sync to cloud now."
+            title="   Sync to Cloud Now!   "
+            accessibilityLabel="Sync to Cloud Now!"
           />
         )}
       </View>
@@ -176,8 +174,10 @@ const styles = StyleSheet.create({
     width: 52,
     marginTop: 10,
     marginLeft: 12,
-    paddingLeft: 5,
+    paddingLeft: 8,
     borderRadius: 5,
+    paddingTop: 4,
+    paddingBottom: 6,
   },
   backButtonText: {
     color: Colors.white,

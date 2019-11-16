@@ -2,7 +2,7 @@ import React from 'react';
 import {TextInput, StyleSheet} from 'react-native';
 import Colors from '../constants/themeColor';
 
-export default props => <TextInput {...props} style={styles.body} />;
+export default props => <TextInput style={styles.body} {...props} />;
 
 const styles = StyleSheet.create({
   body: {

@@ -49,51 +49,19 @@ export default props => {
     }
   };
 
-  const LoginView = () => (
-    <View style={styles.container}>
-      <Text style={{...styles.sectionTitle, marginBottom: 70}}>
-        Please Login to TouchNConnect to access the full functionality!
-      </Text>
-      <InputBox
-        textContentType="username"
-        value={user}
-        onChangeText={text => {
-          setUser(text);
-        }}
-        placeholder="Username"
-      />
-      <InputBox
-        textContentType="password"
-        value={password}
-        onChangeText={text => {
-          setPassword(text);
-        }}
-        placeholder="Password"
-      />
-      <Button
-        onPress={handleLogin}
-        title="Login"
-        accessibilityLabel="Login to your account"
-      />
-      {showErr && <Text style={styles.errorText}>Login Failed</Text>}
-    </View>
-  );
-
   const ProfileView = () => (
     <View style={styles.container}>
       <Image source={{uri: loginDataObj.logoURL}} style={styles.logo} />
       <Text style={styles.sectionTitle}>{loginDataObj.exhibitorName}</Text>
       <Text style={styles.sectionDescription}>{loginDataObj.address}</Text>
       <View style={styles.sectionBox}>
-        <Text style={styles.contactTextBold}>Contact:</Text>
+        <Text style={styles.contactTextBold}>Contact Details:</Text>
         <Text style={styles.contactText}>{loginDataObj.contactName}</Text>
         <Text style={styles.contactText}>{loginDataObj.contactPhone}</Text>
-        <Text style={styles.contactText}>{loginDataObj.contactEmail}</Text>
+        {/* <Text style={styles.contactText}>{loginDataObj.contactEmail}</Text> */}
       </View>
       <TouchableOpacity onPress={props.lauchScanner} style={styles.scanButton}>
-        <Text style={styles.scanButtonText}>
-          Click here to start scanning...
-        </Text>
+        <Text style={styles.scanButtonText}>Tap to Scan...</Text>
       </TouchableOpacity>
     </View>
   );
@@ -106,7 +74,34 @@ export default props => {
       <ProfileView />
     </>
   ) : (
-    <LoginView />
+    <View style={styles.container}>
+      <Text style={{...styles.sectionTitle, marginBottom: 70}}>
+        Please Login to TouchNConnect to access the full functionality!
+      </Text>
+      <InputBox
+        textContentType="username"
+        value={user}
+        onChangeText={value => {
+          setUser(value);
+        }}
+        placeholder="Username"
+      />
+      <InputBox
+        textContentType="password"
+        value={password}
+        onChangeText={value => {
+          setPassword(value);
+        }}
+        placeholder="Password"
+        secureTextEntry
+      />
+      <Button
+        onPress={handleLogin}
+        title="Login"
+        accessibilityLabel="Login to your account"
+      />
+      {showErr && <Text style={styles.errorText}>Login Failed</Text>}
+    </View>
   );
 };
 
@@ -132,8 +127,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   sectionBox: {
+    width: 380,
     borderRadius: 5,
-    padding: 10,
+    padding: 20,
     backgroundColor: Colors.dark,
     color: Colors.white,
     marginTop: 20,
@@ -174,7 +170,9 @@ const styles = StyleSheet.create({
     width: 70,
     marginTop: 10,
     marginLeft: 12,
-    paddingLeft: 5,
+    paddingLeft: 10,
+    paddingTop: 6,
+    paddingBottom: 7,
     borderRadius: 5,
   },
   logoutText: {
