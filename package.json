@@ -15,7 +15,7 @@
     "@react-native-community/async-storage": "^1.6.2",
     "axios": "^0.19.0",
     "react": "16.9.0",
-    "react-native": "0.61.4",
+    "react-native": "0.62.3",
     "react-native-camera": "^3.9.0",
     "react-native-permissions": "^2.0.0",
     "react-native-qrcode-scanner": "github:moaazsidat/react-native-qrcode-scanner#refs/pull/202/head"
